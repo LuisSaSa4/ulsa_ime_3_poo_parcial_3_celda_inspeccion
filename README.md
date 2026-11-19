@@ -11,7 +11,7 @@ La guía completa del proyecto está en [PROYECTO.md](PROYECTO.md). Léanla ante
 | 1 | | | | |
 | 2 | | | | |
 | 3 | | | | |
-| 4 | | | | |
+| 4 |25238 |Daniel Gerardo Guerra Rodriguez | mohawkcat |CalibradorLaser |
 | 5 | | | | |
 | 6 (solo equipo de seis) | | | | |
 
@@ -25,7 +25,17 @@ Escriban el comando exacto que usa el equipo para compilar y el comando para eje
 
 **¿Qué errores dio el compilador al compilar el repositorio base y qué significaba cada uno?**
 
-[Inserta aquí tu respuesta]
+src/CeldaInspeccion.cpp: In member function 'void calidad::CeldaInspeccion::iniciarTurno()':
+src/CeldaInspeccion.cpp:13:29: error: cannot 'dynamic_cast' 'd' (of type 'class calidad::Dispositivo*') to type 'class calidad::Calibrable*' (source type is not polymorphic)
+   13 |         if (Calibrable* c = dynamic_cast<Calibrable*>(d)) 
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/CeldaInspeccion.cpp:14:65: error: 'class calidad::Dispositivo' has no member named 'descripcion'
+   14 |             std::cout << "Calibrando " << d->id() << " (" << d->descripcion() << ") ... "
+      |                                                                 ^~~~~~~~~~~
+src/CeldaInspeccion.cpp:15:30: error: 'class calidad::Calibrable' has no member named 'calibrar'; did you mean 'Calibrable'?
+   15 |                       << (c->calibrar() ? "OK" : "FALLA") << '\n';
+      |                              ^~~~~~~~
+      |                              Calibrable                                                                        >                                                          al_3_celda_inspeccion> 
 
 **¿Qué métodos agregaron a `Dispositivo`? ¿Cuáles son virtuales puros, cuáles son `const` y por qué el destructor es virtual?**
 

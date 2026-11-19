@@ -15,6 +15,9 @@ public:
 
     const std::string& id() const { return id_; }
 
+    virtual void inspeccionar() const;
+
+    virtual void descripcion() const;
     // TODO (equipo): definan el contrato que todo dispositivo debe cumplir.
     //  - La celda necesita pedirle a CUALQUIER dispositivo que inspeccione una pieza
     //    y que diga qué tipo de dispositivo es.
