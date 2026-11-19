@@ -9,7 +9,7 @@ La guía completa del proyecto está en [PROYECTO.md](PROYECTO.md). Léanla ante
 | Integrante | Matrícula | Nombre | Usuario de GitHub | Clase |
 | --- | --- | --- | --- | --- |
 | 1 | | | | |
-| 2 | | | | |
+| 2 | 22038 | Jesus Rene Pamanes Ferreira | TacocraftG | Bascula |
 | 3 | | | | |
 | 4 |25238 |Daniel Gerardo Guerra Rodriguez | mohawkcat |CalibradorLaser |
 | 5 | | | | |
@@ -51,18 +51,18 @@ Turno de 12 piezas, con la celda ya calibrada. Escriban `ACEPTA` o `RECHAZA` por
 
 | Pieza | B-01 | L-01 | V-01 | T-01 | D-01 | Resultado |
 | --- | --- | --- | --- | --- | --- | --- |
-| P-01 | | | | | | |
-| P-02 | | | | | | |
-| P-03 | | | | | | |
-| P-04 | | | | | | |
-| P-05 | | | | | | |
-| P-06 | | | | | | |
-| P-07 | | | | | | |
-| P-08 | | | | | | |
-| P-09 | | | | | | |
-| P-10 | | | | | | |
-| P-11 | | | | | | |
-| P-12 | | | | | | |
+| P-01 | 12 | 50 | 25 | 0 | * | ACEPTA |
+| P-02 | 15 | 50 | 24 | 0 | * | ACEPTA |
+| P-03 | 16.2 | 50.1 | 25 | 0 | * | RECHAZA |
+| P-04 | 12.5 | 50.5 | 26 | 0 | * | ACEPTA |
+| P-05 | 11 | 50.7 | 25 | 0 | * | RECHAZA |
+| P-06 | 13 | 50.2 | 23 | 2 | * | RECHAZA |
+| P-07 | 12.2 | 49.9| 41 | 0 | * | RECHAZA |
+| P-08 | 9.5 | 51 | 25 | 1 | * | RECHAZA |
+| P-09 | 14.8 | 50 | 35 | 0 | * | ACEPTA |
+| P-10 | 10.5 | 49.6 | 22 | 0 | * | ACEPTA |
+| P-11 | 13.5 | 50.3 | 19.5 | 0 | * | RECHAZA |
+| P-12 | 12.8 | 49.9 | 27 | 0 | * | ACEPTA |
 
 **Reporte esperado (inspeccionadas, aceptadas, rechazadas y rechazos por dispositivo):**
 
