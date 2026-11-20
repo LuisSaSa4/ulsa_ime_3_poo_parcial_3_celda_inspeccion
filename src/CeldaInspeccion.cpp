@@ -6,6 +6,10 @@
 
 namespace calidad {
 
+void  CeldaInspeccion::agregarDispositivo(Dispositivo* d){
+    this->dispositivos_.push_back(d);
+}
+
 void CeldaInspeccion::iniciarTurno() {
     std::cout << "=== Inicio de turno ===\n";
     for (Dispositivo* d : dispositivos_) {
