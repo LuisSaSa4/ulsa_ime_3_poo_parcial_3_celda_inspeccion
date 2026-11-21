@@ -39,9 +39,7 @@ src/CeldaInspeccion.cpp:15:30: error: 'class calidad::Calibrable' has no member 
 
 **Error 1: source type is not polymorphic**
 <br>
-El programa intenta convertir un puntero de tipo Dispositivo* a Calibrable* utilizando dynamic_cast, el problema es que Dispositivo todavía no es una clase polimórfica, porque no tiene ningún método virtual.
-Para que dynamic_cast funcione la clase de origen debe tener al menos un método virtual.
-
+El programa intenta convertir un puntero de tipo Dispositivo* a Calibrable* utilizando dynamic_cast. El problema es que Dispositivo todavía no era una clase polimórfica, porque no tenía ningún método virtual declarado. Para que dynamic_cast pueda realizar esta conversión, la clase de origen debe ser polimórfica, es decir, debe contar con al menos una función virtual.
 <br>
 
 **Error 2. Dispositivo has no member named descripcion**
@@ -59,11 +57,19 @@ Sin embargo, la clase Calibrable todavía no declara dicho método.
 
 **¿Qué métodos agregaron a `Dispositivo`? ¿Cuáles son virtuales puros, cuáles son `const` y por qué el destructor es virtual?**
 
-[Inserta aquí tu respuesta]
+Agregamos dos métodos virtuales puros: inspeccionar(const Pieza& pieza) const y descripcion() const. El primero permite que cualquier dispositivo pueda inspeccionar una pieza y devolver un resultado verdadero o falso. El segundo permite obtener una descripción del tipo de dispositivo.
+
+Ambos métodos son virtuales puros porque cada dispositivo debe proporcionar su propia implementación y no tendría sentido crear un dispositivo genérico sin esas funciones.
+
+Los dos métodos utilizan const porque no necesitan modificar el estado del dispositivo para realizar sus operaciones.
+
+También agregamos un destructor virtual (virtual ~Dispositivo() = default;) para asegurar que, cuando se destruya un objeto derivado mediante un puntero Dispositivo*, se ejecute correctamente el destructor de su clase correspondiente.
 
 **¿Qué agregaron a `Calibrable` y por qué no tiene atributos?**
 
-[Inserta aquí tu respuesta]
+Agregamos el método virtual puro calibrar(), que devuelve un valor booleano para indicar si la calibración se realizó correctamente. También agregamos un destructor virtual para permitir destruir de forma segura los objetos que implementen esta interfaz mediante un puntero Calibrable*.
+
+No agregamos atributos porque Calibrable representa una capacidad y no un dispositivo en particular. Su función es establecer qué método deben implementar los dispositivos que pueden calibrarse, mientras que cada clase concreta se encarga de manejar sus propios datos y características.
 
 ## 4. Cálculo a mano del reporte
 
