@@ -8,7 +8,7 @@ La guía completa del proyecto está en [PROYECTO.md](PROYECTO.md). Léanla ante
 
 | Integrante | Matrícula | Nombre | Usuario de GitHub | Clase |
 | --- | --- | --- | --- | --- |
-| 1 | | | | |
+| 1 | 24090| Luis Samano Saavedra| LuisSaSa4 | SensorTemperatura|
 | 2 | 22038 | Jesus Rene Pamanes Ferreira | TacocraftG | Bascula |
 | 3 | | | | |
 | 4 |25238 |Daniel Gerardo Guerra Rodriguez | mohawkcat |CalibradorLaser |
@@ -36,6 +36,26 @@ src/CeldaInspeccion.cpp:15:30: error: 'class calidad::Calibrable' has no member 
    15 |                       << (c->calibrar() ? "OK" : "FALLA") << '\n';
       |                              ^~~~~~~~
       |                              Calibrable                                                                        >                                                          al_3_celda_inspeccion> 
+
+**Error 1: source type is not polymorphic**
+<br>
+El programa intenta convertir un puntero de tipo Dispositivo* a Calibrable* utilizando dynamic_cast, el problema es que Dispositivo todavía no es una clase polimórfica, porque no tiene ningún método virtual.
+Para que dynamic_cast funcione la clase de origen debe tener al menos un método virtual.
+
+<br>
+
+**Error 2. Dispositivo has no member named descripcion**
+<br>
+La celda intenta obtener la descripción del dispositivo para imprimir qué aparato está calibrando.
+Sin embargo, la clase Dispositivo todavía no tiene declarado un método llamado descripcion().
+<br>
+
+**Error 3. Calibrable has no member named calibrar**
+<br>
+La celda intenta ejecutar el método calibrar() para ajustar los dispositivos que tienen esa capacidad.
+Sin embargo, la clase Calibrable todavía no declara dicho método.
+<br>
+<br>
 
 **¿Qué métodos agregaron a `Dispositivo`? ¿Cuáles son virtuales puros, cuáles son `const` y por qué el destructor es virtual?**
 
@@ -66,7 +86,16 @@ Turno de 12 piezas, con la celda ya calibrada. Escriban `ACEPTA` o `RECHAZA` por
 
 **Reporte esperado (inspeccionadas, aceptadas, rechazadas y rechazos por dispositivo):**
 
-[Inserta aquí tu respuesta]
+| Concepto | Equipo de 5 |
+| --- | --- |
+| Inspeccionadas | 12 |
+| Aceptadas | 6 | 
+| Rechazadas | 6 | 
+| Rechazos B-01 (Bascula) | 2 | 
+| Rechazos L-01 (Calibrador Laser)| 2 | 
+| Rechazos T-01 (Sensor de temperatura)| 2 | 
+| Rechazos V-01 (Camara de vision)| 2 |
+| Total de rechazos registrados| 8 |
 
 **¿Coincide con lo que imprime el programa? Si no coincidió al primer intento, ¿qué encontraron y cómo lo corrigieron?**
 
