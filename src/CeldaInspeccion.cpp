@@ -21,6 +21,17 @@ void CeldaInspeccion::iniciarTurno() {
     }
 }
 
+bool CeldaInspeccion::procesar(const Pieza& pieza){
+std::cout << pieza;
+    for(size_t x =0; x < dispositivos_.size(); x++){
+     dispositivos_[x]->inspeccionar(pieza);
+    }
+}
+
+ const ReporteTurno& CeldaInspeccion::reporte() const {
+std:: cout << "\n";
+}
+
 // TODO (equipo): implementen agregarDispositivo(), procesar() y reporte().
 
 }  // namespace calidad
