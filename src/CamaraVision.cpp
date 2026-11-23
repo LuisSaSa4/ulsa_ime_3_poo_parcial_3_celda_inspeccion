@@ -1,0 +1,18 @@
+#include "CamaraVision.h"
+
+namespace calidad {
+
+CamaraVision::CamaraVision(const std::string& id)
+    : Dispositivo(id) {
+}
+
+bool CamaraVision::inspeccionar(const Pieza& pieza) const {
+    return pieza.defectos() == 0;
+}
+
+const std::string& CamaraVision::descripcion() const {
+    static const std::string nombre = "Camara de vision";
+    return nombre;
+}
+
+} // namespace calidad
