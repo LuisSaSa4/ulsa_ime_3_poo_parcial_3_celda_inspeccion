@@ -6,6 +6,10 @@
 
 namespace calidad {
 
+void  CeldaInspeccion::agregarDispositivo(Dispositivo* d){
+    this->dispositivos_.push_back(d);
+}
+
 void CeldaInspeccion::iniciarTurno() {
     std::cout << "=== Inicio de turno ===\n";
     for (Dispositivo* d : dispositivos_) {
@@ -15,6 +19,17 @@ void CeldaInspeccion::iniciarTurno() {
                       << (c->calibrar() ? "OK" : "FALLA") << '\n';
         }
     }
+}
+
+bool CeldaInspeccion::procesar(const Pieza& pieza){
+std::cout << pieza;
+    for(size_t x =0; x < dispositivos_.size(); x++){
+     dispositivos_[x]->inspeccionar(pieza);
+    }
+}
+
+ const ReporteTurno& CeldaInspeccion::reporte() const {
+std:: cout << "\n";
 }
 
 // TODO (equipo): implementen agregarDispositivo(), procesar() y reporte().
