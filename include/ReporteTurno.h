@@ -5,7 +5,6 @@
 namespace calidad {
 
 class ReporteTurno {
-<<<<<<< HEAD
 
 private:
     int piezasInspeccionadas_;
@@ -26,9 +25,3 @@ public:
 };
 
 }  // namespace calidad
-=======
-    public:
-explicit ReporteTurno();
-};
-}  // namespace calidad
->>>>>>> 02f69c27ada1b856816a8431141a977889deaea4
