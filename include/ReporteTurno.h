@@ -3,10 +3,7 @@
 namespace calidad {
 
 class ReporteTurno {
-
     public:
-    explicit ReporteTurno();
-    
+explicit ReporteTurno();
 };
-
 }  // namespace calidad
