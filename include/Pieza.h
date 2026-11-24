@@ -24,6 +24,7 @@ public:
     double temperatura() const { return temperatura_; }
     int defectos() const { return defectos_; }
     double dureza() const { return dureza_; }
+    void incrementarDefectos();
 
     friend std::ostream& operator<<(std::ostream& os, const Pieza& p);
 };
