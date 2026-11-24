@@ -16,7 +16,7 @@ public:
 
     const std::string& id() const { return id_; }
 
-    virtual bool inspeccionar(const Pieza& pieza) const = 0 ;
+    virtual bool inspeccionar(Pieza& pieza) const = 0 ;
 
     virtual const std::string& descripcion() const {};
 

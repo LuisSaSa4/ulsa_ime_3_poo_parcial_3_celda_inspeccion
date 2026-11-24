@@ -6,8 +6,9 @@ CalibradorLaser::CalibradorLaser(const std::string& id_, const std::string& nomb
 
 };
 
-bool CalibradorLaser::inspeccionar(const Pieza& pieza) const{
+bool CalibradorLaser::inspeccionar(Pieza& pieza)const{
 if(pieza.largo() <= 49.5 || pieza.largo() >= 50.50){
+pieza.incrementarDefectos();
 return false;
 }
 else {

@@ -13,7 +13,7 @@ public:
 
 CalibradorLaser(const std::string& nombre_, const std::string& id_);
 
-bool inspeccionar(const Pieza& pieza) const override;
+bool inspeccionar(Pieza& pieza) const override;
 const std::string& descripcion() const override;
 bool calibrar() const override;
 double getDesfase() ;
