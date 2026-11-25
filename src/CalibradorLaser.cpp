@@ -2,33 +2,27 @@
 
 namespace calidad{
 
-CalibradorLaser::CalibradorLaser(const std::string& id_, const std::string& nombre_): Dispositivo(id_), nombre_(nombre_){
+CalibradorLaser::CalibradorLaser(const std::string& id_): Dispositivo(id_){
 
 };
 
-bool CalibradorLaser::inspeccionar(Pieza& pieza)const{
-if(pieza.largo() <= 49.5 || pieza.largo() >= 50.50){
-pieza.incrementarDefectos();
-return false;
-}
-else {
-return true;
-}
+bool CalibradorLaser::inspeccionar(const Pieza& pieza) const {
+double largoMedido = pieza.largo() + desfase_;
+return largoMedido >= 49.5 && largoMedido <= 50.5;
 }
 
-double CalibradorLaser::getDesfase(){
+const std::string& CalibradorLaser::descripcion() const {
+static const std::string nombre = "Calibrador Laser";
+return nombre;
+}
+
+bool CalibradorLaser::calibrar(){
+desfase_ = 0;
+return true;
+}
+
+double CalibradorLaser::getDesfase()const{
     return desfase_;
 }
-
-void CalibradorLaser::modificarDesfase(){
-desfase_ = 0;
-}
-
-bool CalibradorLaser::calibrar() const{
-modificarDesfase;
-return true;
-}
-
-
 
 }
