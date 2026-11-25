@@ -6,32 +6,56 @@
 
 namespace calidad {
 
-void  CeldaInspeccion::agregarDispositivo(Dispositivo* d){
-    this->dispositivos_.push_back(d);
+void CeldaInspeccion::agregarDispositivo(Dispositivo* d) {
+    if (d != nullptr) {
+        dispositivos_.push_back(d);
+    }
 }
 
 void CeldaInspeccion::iniciarTurno() {
     std::cout << "=== Inicio de turno ===\n";
+
     for (Dispositivo* d : dispositivos_) {
-        // ¿Este dispositivo también es Calibrable? (cross-cast con herencia múltiple)
         if (Calibrable* c = dynamic_cast<Calibrable*>(d)) {
-            std::cout << "Calibrando " << d->id() << " (" << d->descripcion() << ") ... "
+            std::cout << "Calibrando " << d->id()
+                      << " (" << d->descripcion() << ") ... "
                       << (c->calibrar() ? "OK" : "FALLA") << '\n';
         }
     }
 }
 
-bool CeldaInspeccion::procesar(const Pieza& pieza){
-std::cout << pieza;
-    for(size_t x =0; x < dispositivos_.size(); x++){
-     dispositivos_[x]->inspeccionar(pieza);
+bool CeldaInspeccion::procesar(const Pieza& pieza) {
+    bool aceptada = true;
+
+    std::cout << "\n=== Inspeccionando pieza " << pieza.id() << " ===\n";
+
+    for (Dispositivo* d : dispositivos_) {
+        if (d == nullptr) {
+            continue;
+        }
+
+        bool resultado = d->inspeccionar(pieza);
+
+        std::cout << "Dispositivo " << d->id()
+                  << " (" << d->descripcion() << "): "
+                  << (resultado ? "Aceptada" : "Rechazada") << '\n';
+
+        if (!resultado) {
+            aceptada = false;
+            reporte_.registrarRechazo(d->id());
+        }
     }
+
+    reporte_.registrarPieza(aceptada);
+
+    std::cout << "Resultado final de la pieza " << pieza.id()
+              << ": " << (aceptada ? "Aceptada" : "Rechazada") << '\n';
+
+    return aceptada;
 }
 
- const ReporteTurno& CeldaInspeccion::reporte() const {
-std:: cout << "\n";
+const ReporteTurno& CeldaInspeccion::reporte() const {
+    return reporte_;
 }
-
-// TODO (equipo): implementen agregarDispositivo(), procesar() y reporte().
 
 }  // namespace calidad

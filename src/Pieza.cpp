@@ -12,4 +12,8 @@ std::ostream& operator<<(std::ostream& os, const Pieza& p) {
     return os;
 }
 
+void Pieza::incrementarDefectos(){
+    defectos_++;
+}
+
 }  // namespace calidad
