@@ -121,8 +121,8 @@ Diagrama de clases de la solución completa, hecho en draw.io. Guarden la imagen
 | | `docs/<matrícula>/<Clase>.md` | `<matrícula>` o "No" |
 |1 |`docs/<24090>/<SensorTemperatura>.md`| |
 | | | |
-|3 | `docs/<25292>/<Camra de vision>.md` |No |
-| | | |
+|3 | `docs/<25292>/<CamaraVision>.md` |No |
+|4 | `docs/<25238>/<CalibradorLaser>.md`| |
 |5 | | |
 
 Los resultados de los experimentos están en [docs/experimentos.md](docs/experimentos.md).
