@@ -19,7 +19,12 @@ La guía completa del proyecto está en [PROYECTO.md](PROYECTO.md). Léanla ante
 
 Escriban el comando exacto que usa el equipo para compilar y el comando para ejecutar.
 
+Coddigo para compilar:
+
 g++ -Wall -Wextra -std=c++17 -Iinclude src/*.cpp -o celda
+
+Codigo para ejecutar:
+
 .\celda
 
 ## 3. Contrato de `Dispositivo` y `Calibrable`
