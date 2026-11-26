@@ -48,3 +48,54 @@ Se pierde la parte propia de la clase derivada. Este comportamiento se conoce co
 
 En nuestro proyecto utilizamos punteros de tipo Dispositivo* para trabajar con diferentes dispositivos. Esto permite conservar el objeto completo y utilizar el polimorfismo. También se puede evitar pasando objetos por referencia, en lugar de hacerlo por valor.
 
+## Experimento 2: Destructor virtual vs. no virtual
+
+### Objetivo
+
+Comprobar la diferencia entre utilizar un destructor virtual y uno no virtual cuando se destruye un objeto derivado mediante un puntero de la clase base.
+
+### Resultados obtenidos
+
+*1. Destructor no virtual*
+
+El compilador mostró la siguiente advertencia:
+
+text
+warning: deleting object of polymorphic class type 'BaseSimple'
+which has non-virtual destructor might cause undefined behavior
+
+
+La salida obtenida fue:
+
+text
+=== Destructor NO virtual ===
+Destructor de BaseSimple
+
+
+En esta ejecución solamente apareció el destructor de BaseSimple.
+
+*2. Destructor virtual*
+
+La salida obtenida fue:
+
+text
+=== Destructor VIRTUAL ===
+Destructor de DerivadaVirtual
+Destructor de BaseVirtual
+
+
+En este caso se ejecutaron primero el destructor de la clase derivada y después el de la clase base.
+
+### Preguntas
+
+*1. ¿Cuál fue la diferencia entre ambos resultados?*
+
+Cuando el destructor de la clase base no era virtual, solamente apareció el mensaje de BaseSimple en nuestra ejecución. Cuando utilizamos un destructor virtual, se ejecutaron los destructores de ambas clases en el orden correcto.
+
+*2. ¿Qué problema podría existir con los recursos de un objeto?*
+
+Si una clase derivada utiliza memoria dinámica u otros recursos, estos podrían no liberarse correctamente al destruir el objeto mediante un puntero base sin destructor virtual. Esto puede provocar problemas y comportamiento indefinido.
+
+*3. ¿En qué situación podría ocurrir este problema en nuestro proyecto?*
+
+Podría ocurrir si en el futuro la clase CeldaInspeccion tuviera que eliminar dinámicamente los dispositivos mediante punteros Dispositivo*. Por eso es importante que la clase base tenga un destructor virtual. Actualmente los dispositivos se crean en main y no se eliminan mediante esos punteros.
