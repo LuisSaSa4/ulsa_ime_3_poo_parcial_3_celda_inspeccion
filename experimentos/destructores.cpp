@@ -2,7 +2,6 @@
 // Programa independiente: no usa las clases del proyecto.
 
 
-
 #include <iostream>
 using namespace std;
 
