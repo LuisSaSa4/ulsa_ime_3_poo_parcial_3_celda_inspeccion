@@ -10,9 +10,9 @@ La guía completa del proyecto está en [PROYECTO.md](PROYECTO.md). Léanla ante
 | --- | --- | --- | --- | --- |
 | 1 | 24090| Luis Samano Saavedra| LuisSaSa4 | SensorTemperatura|
 | 2 | 22038 | Jesus Rene Pamanes Ferreira | TacocraftG | Bascula |
-| 3 | | | | |
+| 3 | 25292 | Yurik David Alrcon Gutierrez | Kothy-Web|CamaraVision|
 | 4 |25238 |Daniel Gerardo Guerra Rodriguez | mohawkcat |CalibradorLaser |
-| 5 | | | | |
+| 5 | |Fernando Caleb Romn Zamarripa|FernandoRoman1709 |ReporteTurno|
 | 6 (solo equipo de seis) | | | | |
 
 ## 2. Cómo compilar y ejecutar
@@ -118,7 +118,7 @@ Diagrama de clases de la solución completa, hecho en draw.io. Guarden la imagen
 | Integrante | Documentación de su clase | Rama del reto opcional |
 | --- | --- | --- |
 | | `docs/<matrícula>/<Clase>.md` | `<matrícula>` o "No" |
-| | | |
+|1 |`docs/<24090>/<SensorTemperatura>.md`| |
 | | | |
 | | | |
 | | | |
