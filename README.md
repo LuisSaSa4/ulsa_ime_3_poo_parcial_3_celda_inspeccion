@@ -121,7 +121,7 @@ Diagrama de clases de la solución completa, hecho en draw.io. Guarden la imagen
 | | `docs/<matrícula>/<Clase>.md` | `<matrícula>` o "No" |
 |1 |`docs/<24090>/<SensorTemperatura>.md`| |
 | | | |
-| | | |
+|3 | `docs/<25292>/<Camra de vision>.md` |NOOOOOOOOOOOOOOOOOOOOOO |
 | | | |
 |5 | | |
 
@@ -139,7 +139,7 @@ Practiquen agregar un dispositivo nuevo antes de entregar.
 
 **¿Qué aprendieron en este proyecto?**
 
-[Inserta aquí tu respuesta]
+El polimorfismo permite tener codigos más cortos y con buena apariencia.
 
 **¿Qué cambiarían de su proceso de trabajo como equipo?**
 
