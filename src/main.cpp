@@ -1,17 +1,31 @@
- #pragma once
+#include <iostream>
+#include <map>
 
-#include "Dispositivo.h"
+#include "Bascula.h"
+#include "CalibradorLaser.h"
+#include "CamaraVision.h"
+#include "SensorTemperatura.h"
+#include "CeldaInspeccion.h"
+#include "DatosTurno.h"
+#include "ReporteTurno.h"
 
-namespace calidad {
+int main() {
+    using namespace calidad;
 
-class CamaraVision final : public Dispositivo {
+    // Crear los dispositivos
+    Bascula bascula("B-01");
+    CalibradorLaser laser("L-01");
+    SensorTemperatura temperatura("T-01");
+    CamaraVision camara("V-01");
 
-public:
-    explicit CamaraVision(const std::string& id);
+    // Crear la celda de inspeccion
+    CeldaInspeccion celda;
 
-    bool inspeccionar(const Pieza& pieza) const override;
+    // Agregar dispositivos a la celda
+    celda.agregarDispositivo(&bascula);
+    celda.agregarDispositivo(&laser);
+    celda.agregarDispositivo(&temperatura);
+    celda.agregarDispositivo(&camara);
 
-    const std::string& descripcion() const override;
-};
-
-} // namespace calidad
+    // Iniciar turno y calibrar dispositivos
+    celda.iniciarTurno();
