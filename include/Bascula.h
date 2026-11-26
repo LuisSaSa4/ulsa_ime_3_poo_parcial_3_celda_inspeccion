@@ -9,7 +9,6 @@ namespace calidad
     {
 
     private:
-    std::string nombre_;
     double desfase_ = 0.4;
     public:
     explicit Bascula(const std::string& id);
