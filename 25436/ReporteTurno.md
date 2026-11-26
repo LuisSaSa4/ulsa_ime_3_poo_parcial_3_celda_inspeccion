@@ -16,13 +16,16 @@ A diferencia de los dispositivos de medición (Bascula, CalibradorLaser, SensorT
 
 **¿Quién usa tu clase y para qué?**
 
-[Inserta aquí tu respuesta]
+CeldaInspeccion: Mantiene una instancia interna de ReporteTurno (consultable mediante celda.reporte()) y la actualiza conforme ejecuta celda.procesar(pieza) sobre cada pieza del turno
+
+La función main() (flujo principal y validación): Al finalizar el recorrido de piezasDelTurno(), imprime el resumen legible en consola mediante std::cout << celda.reporte() y construye un objeto ReporteTurno esperado(...) para verificar mediante celda.reporte() == esperado que el comportamiento de toda la celda coincida con el resultado esperado del turno.
+
 
 ## 2. Decisiones de diseño
 
 **¿De qué clase o clases hereda tu clase y por qué?** (Si es `ReporteTurno`, explica por qué no hereda de `Dispositivo`.)
 
-[Inserta aquí tu respuesta]
+ Esta clase  no hereda  nada incluso de dispositivo por que no tiene un,es un  o usa un  , por qu eno usa dspositivo pues  este representa  un instrumento maquina fisica  que es encargado de trajar la pieza pero reporte turno  es un  organizador de metricas o informacion  , no mide no  gestiona  , no necesita calibrarse  , hacerlo dispositivo romperia las relaciones al ser una clase que solo se dedica a guaradar informacion no medir    ni evaluar un pieza.
 
 **Atributos propios de tu clase y para qué sirve cada uno:**
 
