@@ -2,6 +2,12 @@
 
 namespace calidad {
 
+ReporteTurno::ReporteTurno()
+    : piezasInspeccionadas_(0),
+      piezasAceptadas_(0),
+      piezasRechazadas_(0) {
+}
+
 ReporteTurno::ReporteTurno(int aceptadas, int rechazadas,
                            std::map<std::string, int> rechazosPorDispositivo)
     : piezasInspeccionadas_(aceptadas + rechazadas),

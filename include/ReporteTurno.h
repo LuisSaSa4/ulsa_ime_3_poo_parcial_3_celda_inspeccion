@@ -15,6 +15,8 @@ private:
     std::map<std::string, int> rechazosPorDispositivo_;
 
 public:
+    ReporteTurno();
+
     ReporteTurno(int aceptadas, int rechazadas,
                  std::map<std::string, int> rechazosPorDispositivo);
 
