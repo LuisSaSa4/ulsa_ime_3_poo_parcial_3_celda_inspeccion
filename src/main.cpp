@@ -8,6 +8,7 @@
 #include "CeldaInspeccion.h"
 #include "DatosTurno.h"
 #include "ReporteTurno.h"
+#include "InspectorDureza.h"
 
 int main() {
     using namespace calidad;
@@ -17,7 +18,7 @@ int main() {
     CalibradorLaser laser("L-01");
     SensorTemperatura temperatura("T-01");
     CamaraVision camara("V-01");
-    
+    InspectorDureza dureza("Z-01");
 
     // Crear la celda de inspeccion
     CeldaInspeccion celda;
@@ -27,7 +28,7 @@ int main() {
     celda.agregarDispositivo(&laser);
     celda.agregarDispositivo(&temperatura);
     celda.agregarDispositivo(&camara);
-
+      celda.agregarDispositivo(&dureza);
 
     // Iniciar turno y calibrar dispositivos
     celda.iniciarTurno();
