@@ -139,7 +139,7 @@ Practiquen agregar un dispositivo nuevo antes de entregar.
 
 **¿Qué aprendieron en este proyecto?**
 
-[Inserta aquí tu respuesta]
+El polimorfismo permite tener codigos más cortos y con buena apariencia.
 
 **¿Qué cambiarían de su proceso de trabajo como equipo?**
 
