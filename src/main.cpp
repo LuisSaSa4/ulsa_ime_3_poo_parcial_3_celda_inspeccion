@@ -29,3 +29,33 @@ int main() {
 
     // Iniciar turno y calibrar dispositivos
     celda.iniciarTurno();
+
+    // Obtener las piezas del turno
+    std::vector<Pieza> piezas = piezasDelTurno();
+
+    // Inspeccionar todas las piezas
+    for (const Pieza& pieza : piezas) {
+        celda.procesar(pieza);
+    }
+
+    // Crear el reporte esperado
+    ReporteTurno esperado(6, 6, {
+        {"B-01", 2},
+        {"L-01", 2},
+        {"T-01", 2},
+        {"V-01", 2}
+    });
+
+    // Mostrar reporte final
+    std::cout << "\n=== REPORTE FINAL ===\n";
+    std::cout << celda.reporte();
+
+    // Comparar reporte real con reporte esperado
+    if (celda.reporte() == esperado) {
+        std::cout << "Reporte correcto\n";
+    } else {
+        std::cout << "Reporte incorrecto\n";
+    }
+
+    return 0;
+}
