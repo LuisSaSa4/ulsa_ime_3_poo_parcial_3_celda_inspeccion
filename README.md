@@ -10,16 +10,17 @@ La guía completa del proyecto está en [PROYECTO.md](PROYECTO.md). Léanla ante
 | --- | --- | --- | --- | --- |
 | 1 | 24090| Luis Samano Saavedra| LuisSaSa4 | SensorTemperatura|
 | 2 | 22038 | Jesus Rene Pamanes Ferreira | TacocraftG | Bascula |
-| 3 | | | | |
+| 3 | 25292 | Yurik David Alrcon Gutierrez | Kothy-Web|CamaraVision|
 | 4 |25238 |Daniel Gerardo Guerra Rodriguez | mohawkcat |CalibradorLaser |
-| 5 | | | | |
+| 5 |25436 |Fernando Caleb Roman Zamarripa|FernandoRoman1709 |ReporteTurno|
 | 6 (solo equipo de seis) | | | | |
 
 ## 2. Cómo compilar y ejecutar
 
 Escriban el comando exacto que usa el equipo para compilar y el comando para ejecutar.
 
-[Inserta aquí tu respuesta]
+g++ -Wall -Wextra -std=c++17 -Iinclude src/*.cpp -o celda
+.\celda
 
 ## 3. Contrato de `Dispositivo` y `Calibrable`
 
@@ -105,7 +106,7 @@ Turno de 12 piezas, con la celda ya calibrada. Escriban `ACEPTA` o `RECHAZA` por
 
 **¿Coincide con lo que imprime el programa? Si no coincidió al primer intento, ¿qué encontraron y cómo lo corrigieron?**
 
-[Inserta aquí tu respuesta]
+El resultado fue lo esperado al trabajar cada clase de manera consiente y  manejando  un obketivo el cual era replicar los resultados hechos a mano , generando un codigo limpio y  el cual fue siguiendo los parametros de la  programacion orientada a objetos
 
 ## 5. Diagrama de clases
 
@@ -118,11 +119,11 @@ Diagrama de clases de la solución completa, hecho en draw.io. Guarden la imagen
 | Integrante | Documentación de su clase | Rama del reto opcional |
 | --- | --- | --- |
 | | `docs/<matrícula>/<Clase>.md` | `<matrícula>` o "No" |
+|1 |`docs/<24090>/<SensorTemperatura>.md`| |
 | | | |
 | | | |
 | | | |
-| | | |
-| | | |
+|5 | | |
 
 Los resultados de los experimentos están en [docs/experimentos.md](docs/experimentos.md).
 
