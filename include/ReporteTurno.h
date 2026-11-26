@@ -1,6 +1,8 @@
 #pragma once
 
+#include <map>
 #include <string>
+#include <iostream>
 
 namespace calidad {
 
@@ -10,18 +12,25 @@ private:
     int piezasInspeccionadas_;
     int piezasAceptadas_;
     int piezasRechazadas_;
+    std::map<std::string, int> rechazosPorDispositivo_;
 
 public:
-    explicit ReporteTurno();
+    ReporteTurno(int aceptadas, int rechazadas,
+                 std::map<std::string, int> rechazosPorDispositivo);
 
-    void registrarAceptada();
-    void registrarRechazada();
+    void registrarPieza(bool aceptada);
+    void registrarRechazo(const std::string& dispositivo);
 
     int inspeccionadas() const;
     int aceptadas() const;
     int rechazadas() const;
 
+    const std::map<std::string, int>& rechazosPorDispositivo() const;
+
     bool operator==(const ReporteTurno& otro) const;
+
+    friend std::ostream& operator<<(std::ostream& os,
+                                   const ReporteTurno& reporte);
 };
 
 }  // namespace calidad
