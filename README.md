@@ -115,9 +115,9 @@ El resultado fue lo esperado al trabajar cada clase de manera consiente y  manej
 
 ## 5. Diagrama de clases
 
-Diagrama de clases de la solución completa, hecho en draw.io. Guarden la imagen en la raíz del repositorio como `diseno_solucion.png`.
+Diagrama de clases de la solución completa, hecho en draw.io. Guarden la imagen en la raíz del repositorio como `diseno_solucion.jpg`.
 
-![Diagrama de clases](diseno_solucion.png)
+![Diagrama de clases](diseno_solucion.jpg)
 
 ## 6. Documentación individual
 
