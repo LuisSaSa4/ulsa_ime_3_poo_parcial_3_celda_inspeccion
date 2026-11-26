@@ -56,7 +56,10 @@ el desfase es una variable privada que no se puede modificar al menos que lo hag
 
 **¿Cómo comprobaste que tu clase funciona? ¿Qué piezas del turno te sirvieron para verificarla?**
 
-[Inserta aquí tu respuesta]
+al compilar y verificar los resultados de la terminal por ejemplo:
+
+Pieza P-05::Dispositivo L-01 (Calibrador Laser): Rechazada (largo de 50.7)
+Pieza P-03::Dispositivo L-01 (Calibrador Laser): Aceptada  (largo de 50.1)
 
 ## 4. Bitácora
 
