@@ -124,7 +124,7 @@ Diagrama de clases de la solución completa, hecho en draw.io. Guarden la imagen
 | Integrante | Documentación de su clase | Rama del reto opcional |
 | --- | --- | --- |
 | | `docs/<matrícula>/<Clase>.md` | `<matrícula>` o "No" |
-|1 |`docs/<24090>/<SensorTemperatura>.md`| |
+|1 |`docs/<24090>/<SensorTemperatura>.md`| 24090 |
 | 2 | `docs/<22038>/<Bascula>.md`| No|
 |3 | `docs/<25292>/<CamaraVision>.md` |No |
 |4 | `docs/<25238>/<CalibradorLaser>.md`| No|
