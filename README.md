@@ -106,7 +106,7 @@ Turno de 12 piezas, con la celda ya calibrada. Escriban `ACEPTA` o `RECHAZA` por
 
 **¿Coincide con lo que imprime el programa? Si no coincidió al primer intento, ¿qué encontraron y cómo lo corrigieron?**
 
-El resultado fue lo esperado al trabajar cada clase de manera consiente y  manejando  un obketivo el cual era replicar los resultados hechos a mano , generando un codigo limpio y  el cual fue siguiendo los parametros de la  programacion orientada a objetos
+El resultado fue lo esperado al trabajar cada clase de manera consiente y  manejando  un objetivo el cual era replicar los resultados hechos a mano , generando un codigo limpio y  el cual fue siguiendo los parametros de la  programacion orientada a objetos
 
 ## 5. Diagrama de clases
 
@@ -121,8 +121,8 @@ Diagrama de clases de la solución completa, hecho en draw.io. Guarden la imagen
 | | `docs/<matrícula>/<Clase>.md` | `<matrícula>` o "No" |
 |1 |`docs/<24090>/<SensorTemperatura>.md`| |
 | | | |
-|3 | `docs/<25292>/<Camra de vision>.md` |NOOOOOOOOOOOOOOOOOOOOOO |
-| | | |
+|3 | `docs/<25292>/<CamaraVision>.md` |No |
+|4 | `docs/<25238>/<CalibradorLaser>.md`| |
 |5 | | |
 
 Los resultados de los experimentos están en [docs/experimentos.md](docs/experimentos.md).
@@ -133,14 +133,24 @@ Practiquen agregar un dispositivo nuevo antes de entregar.
 
 **¿Qué archivos tuvieron que crear o modificar? ¿Tuvieron que tocar `CeldaInspeccion`?**
 
-[Inserta aquí tu respuesta]
+Para la preba que realizamos cremos dos archivos nuevos llamados DetectorExtra.h y DetectorExtra.cpp y modificamos por un momento el main.cpp para crear el objeto correspondiente y agregarlo a la celda por medio de agregarDispositivo().
+
+Se cumplio uno de los principales objetivos principales del proyecto ya que no fue necesario modificar la CeldaInspeccion.h ni CeldaInspeccion.cpp, por que la celda usa punteros de tipo Dispositivo* y el polimorfismo para de esta forma poder trabajar con diferentes dispositivos.
+
+En la prueba el nuevo detector o maquina rechazo 2 piezas lo cual se vio reflejado en el reporte lo que comprobo que el sistema que creamos permite integrar un nuevo dispositivo y contar sus resultados sin modificar la clase de celda de Inspeccion.
+
+
 
 ## 8. Reflexión del equipo
 
 **¿Qué aprendieron en este proyecto?**
 
-El polimorfismo permite tener codigos más cortos y con buena apariencia.
+El equipo aprendio a aplicar y reforzar de mejor forma los conceptos  vistos en la clase de programacion orientada a objetos como clases, constructores, herencia, composicion, agregacion y etc. Tambien aunque podemos seguir mejorando en este aspecto desarrollamos de mejor forma desde un prinpico el diagrama con el cual nos guiamos para crear el proyecto.
+
+Tambien principalmenmte en este ultimo parcial aprendimos como funciona el polimorfismo y como podemos utilizarlo para que varias clases trabajen de una misma manera aunque cada uno tenga su propio comportamiento. Gracias a esto la celda de inspeccion pudo trabajar con otras clases sin tener que conocer los detales de cada clase. En resumen aprendimos que gracias al polimorfismo podemos agregar en este caso un disposotivo nuevo sin modificar gran parte del codigo lo cual nos permite trabajar mas rapido y de una forma mas organizada.
 
 **¿Qué cambiarían de su proceso de trabajo como equipo?**
 
-[Inserta aquí tu respuesta]
+Creemos que podriamos mejorar en la comunicacion, planeacion y organizacion del proyecto desde el princio de la elevoracion del trabajo ya que esto nos podria permitir avanzar mas rapido en el prceso de desarrollo ya que evitariamos devolvernos pasos atras varias veces de forma inecesaria, este es un problema que ya hemos cometido anetriormente pero seguiremos buscando la forma de mejorar esa parte.
+
+Tambien  en un futuro nos aseguraremos que clases como celda de inspeccion o dispositivo les quede claro a todos los miembros del proyecto desde el inicio del trabajo ya que esto causa inconsistencias en los codigos que realiza cada quien, lo cual provoca que no se puedan implementar de forma adecuada el resto del codigo.
